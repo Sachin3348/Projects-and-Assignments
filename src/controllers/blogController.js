@@ -55,7 +55,7 @@ const getBlogs = async function (req, res) {
         if (blogs.length > 0) {
             return res.status(200).send({ status: true, data: blogs });
         } else {
-            return res.status(404).send({ status: false, msg: "not found" });
+            return res.status(204).send({ status: false, msg: "not found" });
         }
     } catch (err) {
         res.status(500).send({ msg: "server error" });
